@@ -1,7 +1,8 @@
 import { authenticate } from 'dropbox-v2-api';
 import * as fs from 'fs';
+import * as dotenv from 'dotenv'
 
-const accessToken = 'sl.BTi_k2y80Y0pL73ht4B-a2UZwBsFOsouRYTpTBdtSa__fYScl3HxJbkv9RrsoQE1jAs3sjXchMaZhQ7T-mGSiA5MHPa6etvHctibwQcSn8VXS1_Pez84kILJoIXS8QWQldGL4LeL08o';
+const accessToken = process.env.DB_TOKEN;
 
 const dropbox = authenticate({
     token: accessToken
